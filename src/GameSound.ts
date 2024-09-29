@@ -16,7 +16,7 @@ class GameSound {
 
     initSound = () => {
         for (const key of this.soundKeys) {
-            let sound = new Audio(`sound/${key}.mp3`);
+            let sound = new Audio(`./sound/${key}.mp3`);
             sound.volume = 0;
             sound.play().then(async () => { sound.pause(); sound.volume = 1; });
             this.sounds.set(key, sound);
